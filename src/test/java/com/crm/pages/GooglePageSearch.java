@@ -10,8 +10,6 @@ public class GooglePageSearch {
     public GooglePageSearch(){
         PageFactory.initElements(Driver.getDriver(),this);
 
-
-
     }
 
     @FindBy(css = ".gLFyf")
