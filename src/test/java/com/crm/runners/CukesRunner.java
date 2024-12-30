@@ -14,8 +14,8 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "com/crm/step_definitions",
-        dryRun =true,
-        tags = "",
+        dryRun =false,
+        tags = "@validLogin",
         publish = true
 
         //generating report for public
