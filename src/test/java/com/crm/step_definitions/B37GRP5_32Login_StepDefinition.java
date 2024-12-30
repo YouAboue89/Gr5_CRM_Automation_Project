@@ -13,7 +13,7 @@ import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
 
-public class Login_StepDefinition {
+public class B37GRP5_32Login_StepDefinition {
     AgileProCRMBasePage agileProCRMBasePage = new AgileProCRMBasePage();
     B37GRP5_32_LoginVerification loginVerification = new B37GRP5_32_LoginVerification();
 
@@ -56,6 +56,7 @@ public class Login_StepDefinition {
     @And("user see  {string} error message is displayed if the password or username is empty")
     public void userSeeErrorMessageIsDisplayedIfThePasswordOrUsernameIsEmpty(String arg0) {
     }
+
 
     @Then("Verify that the password is in bullet signs by default.")
     public void verifyThatThePasswordIsInBulletSignsByDefault() {
