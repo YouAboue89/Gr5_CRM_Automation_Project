@@ -13,7 +13,7 @@ Feature: Some of the general login functionality
 
     Examples:
       | username       | password |
-      | hr43@cydeo.com | UserUser |
+      | hr15@cydeo.com  | UserUser |
 
 
   Scenario Outline: Forgot Password
@@ -23,12 +23,8 @@ Feature: Some of the general login functionality
     Then user should lands on Get Password
     Examples:
       | username       |
-      | hr43@cydeo.com |
+      | helpdesk15@cydeo.com |
 
 
 
 
-<<<<<<< HEAD
-=======
-  Scenario Outline:
->>>>>>> refs/heads/master
