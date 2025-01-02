@@ -15,7 +15,6 @@ Feature: Some of the general login functionality
       | username       | password |
       | hr15@cydeo.com  | UserUser |
 
-
   Scenario Outline: Forgot Password
     Given user is on the AgileProCRM web page
     And user enters valid userName "<username>"
