@@ -54,13 +54,14 @@ public class AcessLoginB37GR5_34_StepDefinitons {
     @And("user clicks login button")
     public void userClicksLoginButton() {
         agileProCRMBasePage.logInButton.click();
-        BrowserUtils.sleep(5);
+        BrowserUtils.sleep(3);
 
     }
     @Given("user closes the window.")
     public void user_closes_the_window() {
 
         Driver.closeDriver();
+
       //  JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
        // executor.executeScript("window.close();");
 
@@ -68,7 +69,7 @@ public class AcessLoginB37GR5_34_StepDefinitons {
 
    @When("user opens the application again")
    public void user_opens_the_application_again() {
- Driver.getDriver().get(ConfigurationReader.getProperty("loginSuccessfullyURL"));
+ Driver.getDriver().get(ConfigurationReader.getProperty("agileProCRMUrl"));
 
     }
 
@@ -78,11 +79,7 @@ public class AcessLoginB37GR5_34_StepDefinitons {
         System.out.println("actualTitle = " + actualTitle);
     }
 
-    // @Then("user should land on HOME page automatically and see {string} as title")
-   // public void userShouldLandOnHOMEPageAutomaticallyAndSeeAsTitle(String expectedTitle) {
-   //     String actualTitle = Driver.getDriver().getTitle();
-   //     Assert.assertEquals(actualTitle, expectedTitle);
-  //  }
+
 
     @When("user clicks in to {string}")
     public void userClicksInTo(String ForgotPassword) {
