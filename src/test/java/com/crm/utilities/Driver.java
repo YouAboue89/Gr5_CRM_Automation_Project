@@ -51,4 +51,21 @@ public class Driver {
 
         }
     }
+
+    public static void closeLogin(){
+
+        if (driver!=null){
+
+            driver.close();
+
+           driver= new ChromeDriver();
+
+
+
+
+
+        }
+
+
+    }
 }
