@@ -1,6 +1,8 @@
 package com.crm.pages;
 
+import com.crm.utilities.ConfigurationReader;
 import com.crm.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -54,6 +56,21 @@ public class AgileProCRMBasePage {
         this.logInButton.click();
 
 
+    }
+
+    public void login(String userType) {
+        String username = ConfigurationReader.getProperty(userType + "_username");
+        String password = ConfigurationReader.getProperty(userType + "_password");
+        inputUserNameField.sendKeys(username);
+        inputUserPasswordField.sendKeys(password);
+        logInButton.click();
+
+    }
+
+    public void selectOption(String option){
+        String locator=  "(//td[@class='bx-layout-inner-left'])[1]//li//a[contains(.,'"+option+"')]";
+        WebElement optionEl = Driver.getDriver().findElement(By.xpath(locator));
+        optionEl.click();
     }
 
 }
