@@ -40,12 +40,12 @@ public class BasePage_StepDefinition {
 
     @When("user should be able to enter valid userName")
     public void user_should_be_able_to_enter_valid_user_name() {
-        agileProCRMBasePage.inputUserNameField.sendKeys(ConfigurationReader.getProperty("username"));
+        agileProCRMBasePage.inputUserNameField.sendKeys(ConfigurationReader.getProperty("hr_username"));
     }
 
     @When("user should be able to enter valid userPassword")
     public void user_should_be_able_to_enter_valid_user_password() {
-        agileProCRMBasePage.inputUserPasswordField.sendKeys(ConfigurationReader.getProperty("password"));
+        agileProCRMBasePage.inputUserPasswordField.sendKeys(ConfigurationReader.getProperty("hr_password"));
     }
 
     @And("user should be able to click on checkBox")
