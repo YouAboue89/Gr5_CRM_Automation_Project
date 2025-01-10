@@ -10,12 +10,14 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
 
         plugin = {
-                "html:Target/cucumber-reports.html"
+                "html:target/cucumber-reports.html",
+                "rerun:target/rerun.txt",
+                "me.jvt.cucumber.report.PrettyReports:target/cucumber"
         },
         features = "src/test/resources/features",
         glue = "com/crm/step_definitions",
-        dryRun =false,
-        tags = "@validLogin",
+        dryRun = false,
+        tags = "@AA",
         publish = true
 
         //generating report for public
