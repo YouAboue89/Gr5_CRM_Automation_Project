@@ -15,8 +15,14 @@ Feature: As a user, I should be able to access login page features.
 
       | username              | password |
       | hr15@cydeo.com        | UserUser |
+      | hr1@cydeo.com         | UserUser |
+      | hr75@cydeo.com         | UserUser |
       | helpdesk15@cydeo.com  | UserUser |
+      | helpdesk5@cydeo.com   | UserUser |
+      | helpdesk75@cydeo.com   | UserUser |
       | marketing15@cydeo.com | UserUser |
+      | marketing5@cydeo.com  | UserUser |
+      | marketing75@cydeo.com   | UserUser |
 
 
   @InvalidLogin
@@ -25,7 +31,6 @@ Feature: As a user, I should be able to access login page features.
     When user enters the username "<username>" and password "<password>"
     And user clicks to login button
     And user see "Incorrect login or password" error message is displayed for invalid credentials
-
     And the user should not be able to log in
 
     Examples:
@@ -37,7 +42,7 @@ Feature: As a user, I should be able to access login page features.
       | Wrongmail@.com        | UserUser  |
       | marketing15@cydeo.com | WrongPass |
 
-@feature
+  @feature
   Scenario: Feature in a login page
 
     When user see  "Please fill out email and password fields!" error message is displayed if the password or username is empty
