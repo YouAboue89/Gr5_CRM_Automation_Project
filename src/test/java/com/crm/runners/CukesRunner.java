@@ -15,13 +15,14 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/crm/step_definitions",
         dryRun =false,
-        tags = "@validLogin",
+        tags = "@B37GRP5_38",
         publish = true
 
         //generating report for public
 )
 
-public class CukesRunner {
 
+public class CukesRunner {
+        
 
 }
