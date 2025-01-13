@@ -1,5 +1,6 @@
 package com.crm.utilities;
 
+import com.crm.pages.AgileProCRMBasePage;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -123,12 +124,14 @@ public class BrowserUtils {
     }
 
     public static List<String> getElementsText(List<WebElement> list) {
+
         List<String> elemTexts = new ArrayList<>();
         for (WebElement el : list) {
             elemTexts.add(el.getText());
         }
         return elemTexts;
     }
+
 
     /**
      * Extracts text from list of elements matching the provided locator into new List<String>
@@ -145,8 +148,21 @@ public class BrowserUtils {
             elemTexts.add(el.getText());
         }
         return elemTexts;
+
     }
 
+    public static void loginToAgilProCrm(){
 
+        AgileProCRMBasePage agileProCRMBasePage = new AgileProCRMBasePage();
+
+        Driver.getDriver().get(ConfigurationReader.getProperty("agileProCRMUrl"));
+        agileProCRMBasePage.inputUserNameField.sendKeys(ConfigurationReader.getProperty("username"));
+        agileProCRMBasePage.inputUserPasswordField.sendKeys(ConfigurationReader.getProperty("password"));
+        agileProCRMBasePage.logInButton.click();
+
+
+
+
+    }
 
 }

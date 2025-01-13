@@ -55,7 +55,6 @@ public class AgileProCRMBasePage {
         this.inputUserPasswordField.sendKeys(password);
         this.logInButton.click();
 
-
     }
 
     public void login(String userType) {
